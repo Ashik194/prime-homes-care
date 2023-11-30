@@ -49,6 +49,8 @@ The development of Winter is lead by [Luke Towers](https://luketowers.ca/), alon
 
 <table>
   <tr>
+    <td align="center"><a href="https://github.com/Ashik194"><img src="https://avatars.githubusercontent.com/u/55125527?s=400" width="100px;" alt="ASHIK"/><br /><sub><b>ASHIK</b></sub></a></td>
+  <tr>
     <td align="center"><a href="https://github.com/luketowers"><img src="https://avatars.githubusercontent.com/u/7253840?v=3" width="100px;" alt="Luke Towers"/><br /><sub><b>Luke Towers</b></sub></a></td>
     <td align="center"><a href="https://github.com/bennothommo"><img src="https://avatars.githubusercontent.com/u/15900351?v=3" width="100px;" alt="Ben Thomson"/><br /><sub><b>Ben Thomson</b></sub></a></td>
     <td align="center"><a href="https://github.com/mjauvin"><img src="https://avatars.githubusercontent.com/u/2013630?v=3" width="100px;" alt="Marc Jauvin"/><br /><sub><b>Marc Jauvin</b></sub></a></td>
