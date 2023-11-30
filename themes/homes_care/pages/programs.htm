@@ -1,0 +1,122 @@
+title = "Programs"
+url = "/programs"
+layout = "default"
+is_hidden = 0
+
+[builderList programList]
+modelClass = "Orangebd\PrimeHomes\Models\Program"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "program-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+sortColumn = "id"
+sortDirection = "desc"
+==
+{% set programs = programList.records %}
+{% set programDisplayColumn = programList.displayColumn %}
+{% set programNoRecordsMessage = programList.noRecordsMessage %}
+{% set programDetailsPage = programList.detailsPage %}
+{% set programDetailsKeyColumn = programList.detailsKeyColumn %}
+{% set programDetailsUrlParameter = programList.detailsUrlParameter %}
+
+{% put head %}
+    <title>Programs - Prime Homes Care</title>
+    <meta name="title" content="Prime Homes Care">
+    <meta name="description" content="Prime Homes Care description goes to here...">
+{% endput %}
+
+<div class="programs">
+    <div class="programs-inner pt-5">
+        <div class="container">
+            <div class="program-banner d-flex align-items-center justify-content-center">
+                <div class="program-banner-text-section">
+                    <h1 class="text-white">Home is where health begins.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="program-gallery">
+                <div class="row">
+
+                    {% for program in programs %}
+                        <div class="col-md-6 my-4">
+                            <a href="{{ programDetailsPage|page({ (programDetailsUrlParameter): attribute(program, programDetailsKeyColumn) }) }}">
+                                <div class="program-gallery-image-section" style="background-image: url('/storage/app/media/{{ program.image }}');">
+                                    <div class="gallery-overlay"></div>
+                                    <div class="gallery-text">
+                                        <h2>{{ attribute(program, programDisplayColumn) }}</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    
+                    {# <div class="col-md-6 my-4">
+                        <a href="">
+                            <div class="program-gallery-image-section">
+                                <div class="gallery-overlay"></div>
+                                <div class="gallery-text">
+                                    <h2>Companion Care</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-6 my-4">
+                        <a href="">
+                            <div class="program-gallery-image-section">
+                                <div class="gallery-overlay"></div>
+                                <div class="gallery-text">
+                                    <h2>Companion Care</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div> #}
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <div class="responsibility-section">
+                <div class="prgrams-responsibilty-left-img">
+                    <img src="/themes/homes_care/assets/images/home/2.png" alt="">
+                </div>
+                <div class="programs-responsibility-right-text">
+                    <h4>"Caring for our seniors is perhaps the greatest responsibility we have. Those who walked before us have given so much and made possible the life we all enjoy."</h4>
+                    <h5 class="mt-3">— Senator John Hoeven</h5>
+                </div>  
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="programs-bellow-img-section">
+                        <img src="/themes/homes_care/assets/images/home/2.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-3">
+                    <div class="programs-bellow-img-section">
+                        <img src="/themes/homes_care/assets/images/home/2.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-3">
+                    <div class="programs-bellow-img-section">
+                        <img src="/themes/homes_care/assets/images/home/2.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,97 @@
+[staticMenu]
+code = "main-menu"
+
+[viewBag]
+==
+<div class="container-fluid pt-5" style="position:absolute;">
+    <!-- Logo on the left -->
+    <a class="navbar-brand mt-md-2" href="/">
+      <img src="{{'/storage/app/media/Frame 1.png'}}" alt="">
+    </a>
+    
+    <!-- Centered menu items on desktop -->
+    <div class="d-none d-lg-flex mx-auto">
+    {% if staticMenu.menuItems %}
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% for item in staticMenu.menuItems %}
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+        
+    </div>
+
+    <!-- Button on the right on desktop -->
+    {# <form class="d-none d-lg-flex"> #}
+      <button class="nav-join-btn" type="submit" data-bs-toggle="modal" data-bs-target="#giver-taker">Join Now</button>
+    {# </form> #}
+
+    <!-- Toggleable sidebar on mobile -->
+    <div class="d-lg-none">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mobileNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Add mobile menu items here -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mobile Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- Button trigger modal -->
+{# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> #}
+
+<!-- Modal -->
+<div class="modal fade" id="giver-taker" tabindex="-1" aria-labelledby="giver-taker" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="giver-taker">Send US</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="care-type">
+          <div class="care-taker d-flex align-items-center" id="careTackerDiv">
+            <h4 class="fw-bold text-uppercase">Care Taker</h4>
+          </div>
+          <div class="care-giver d-flex align-items-center" id="careGoverDiv">
+            <h4 class="fw-bold text-uppercase">Care Giver</h4>
+          </div>
+        </div>
+        <div class="gover-taker-form-section">
+          <div class="care-giver-form my-2">
+            <form action="">
+              <div class="mb-3">
+                <label for="emailAddress" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+      {# <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div> #}
+  </div>
+</div>
+
+
+
+

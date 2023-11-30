@@ -1,0 +1,63 @@
+items:
+    -
+        title: Home
+        nesting: false
+        type: cms-page
+        url: null
+        code: ''
+        reference: home
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Getting Started'
+        nesting: false
+        type: cms-page
+        url: null
+        code: ''
+        reference: getting-started
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: About
+        nesting: false
+        type: cms-page
+        url: null
+        code: ''
+        reference: about
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Programs
+        nesting: false
+        type: cms-page
+        url: null
+        code: ''
+        reference: programs
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contact
+        type: cms-page
+        code: ''
+        reference: content
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main Menu'

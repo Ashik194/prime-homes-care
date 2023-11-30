@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: 'Program Title'
+        type: text
+    image:
+        label: Picture
+        type: image

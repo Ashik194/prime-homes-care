@@ -1,0 +1,10 @@
+name: Program
+form: $/orangebd/primehomes/models/program/fields.yaml
+modelClass: Orangebd\PrimeHomes\Models\Program
+defaultRedirect: orangebd/primehomes/program
+create:
+    redirect: 'orangebd/primehomes/program/update/:id'
+    redirectClose: orangebd/primehomes/program
+update:
+    redirect: orangebd/primehomes/program
+    redirectClose: orangebd/primehomes/program

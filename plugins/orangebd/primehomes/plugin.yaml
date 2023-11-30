@@ -1,0 +1,16 @@
+plugin:
+    name: 'orangebd.primehomes::lang.plugin.name'
+    description: 'orangebd.primehomes::lang.plugin.description'
+    author: orangebd
+    icon: wn-icon-adjust
+    replaces: {  }
+navigation:
+    main-menu-item:
+        label: Programs
+        url: orangebd/primehomes/program
+        icon: icon-life-ring
+        sideMenu:
+            programs:
+                label: 'Program List'
+                url: orangebd/primehomes/program
+                icon: icon-list-alt

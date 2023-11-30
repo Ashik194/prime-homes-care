@@ -1,0 +1,58 @@
+fields:
+    title:
+        label: 'Main Title'
+        span: full
+        type: text
+    section_title:
+        label: 'Section TItle'
+        span: full
+        type: text
+    content_title:
+        label: 'First service TItle'
+        span: full
+        type: text
+    contents:
+        label: 'First Content Description'
+        size: ''
+        span: full
+        type: richeditor
+    second_service_title:
+        label: 'Second Service Title'
+        span: full
+        type: text
+    second_service_contents:
+        label: 'Second Service Description'
+        size: ''
+        span: full
+        type: richeditor
+    third_service_title:
+        label: 'Third Service Title'
+        span: full
+        type: text
+    third_service_contents:
+        label: 'Third Service Descripton'
+        size: ''
+        span: full
+        type: richeditor
+    image:
+        label: Picture
+        mode: file
+        span: full
+        type: mediafinder
+    img_alt:
+        label: 'Picture ALT text'
+        span: full
+        type: text
+    meta_title:
+        label: 'SEO Meta Title'
+        span: auto
+        type: text
+    canonical_url:
+        label: 'SEO Canonical URL'
+        span: auto
+        type: text
+    meta_description:
+        label: 'SEO meta Description'
+        size: ''
+        span: full
+        type: richeditor

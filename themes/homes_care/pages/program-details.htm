@@ -1,0 +1,36 @@
+title = "Program Details"
+url = "/program-details/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Orangebd\PrimeHomes\Models\Program"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% set fullUrl = "/programs/" ~ record.slug %}
+
+<div class="program-details">
+    <div class="program-details-banner-section pt-5 d-flex justify-content-center align-items-center" style="background-image: url('/storage/app/media/{{ record.image }}');">
+        <h1 class="program-details-banner-title">{{ record.title }}</h1>
+    </div>
+
+    <div class="program-sections py-5">
+        <div class="container">
+            <h2 class="text-center program-section-title">Service</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-center">{{record.content_title}}</h3>
+                    <p>{{ record.contents|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
